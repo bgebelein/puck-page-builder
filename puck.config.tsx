@@ -6,6 +6,7 @@ import { Footer } from "./app/sections/footer";
 import { Stack } from "./app/components/Stack";
 import { Spacer } from "./app/components/spacer";
 import { Hero } from "./app/sections/hero";
+import { Team } from "./app/sections/team";
 
 export const config: Config = {
   categories: {
@@ -19,7 +20,7 @@ export const config: Config = {
     },
     sections: {
       title: "Sections",
-      components: ["Hero", "Footer"],
+      components: ["Hero", "Team", "Footer"],
     },
   },
   components: {
@@ -30,6 +31,7 @@ export const config: Config = {
     Stack,
     Spacer,
     Hero,
+    Team
   },
 };
 
