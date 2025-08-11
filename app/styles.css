@@ -51,9 +51,8 @@
   }
 }
 
-@utility container {
-  margin: 0 auto;
-  padding-inline: 1rem;
+.container {
+  @apply max-w-7xl mx-auto px-3;
 }
 
 .card{
