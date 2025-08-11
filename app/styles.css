@@ -13,9 +13,7 @@
   h4,
   h5,
   h6 {
-    font-weight: var(--font-bold);
-    font-family: var(--font-poppins);
-    color: var(--color-slate-800);
+    @apply font-bold font-poppins text-slate-800;
   }
 
   h1 {
@@ -45,20 +43,19 @@
   p,
   a,
   label {
-    font-family: var(--font-lato);
-    color: var(--color-slate-600);
-    font-size: var(--text-xl);
-    line-height: var(--leading-normal);
+    @apply font-lato text-slate-600 text-xl leading-normal;
   }
 
   .iconify {
-    display: inline-block;
-    width: 1.5rem;
-    height: 1.5rem;
+    @apply inline-block size-6;
   }
 }
 
 @utility container {
   margin: 0 auto;
   padding-inline: 1rem;
+}
+
+.card{
+  @apply bg-slate-50 p-8 rounded-2xl shadow-sm;
 }
