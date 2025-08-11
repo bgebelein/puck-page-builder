@@ -11,6 +11,7 @@ export const Section = {
             labelIcon: <Icon icon="lucide:paint-bucket" />,
             type: "select",
             options: [
+                { label: "None", value: "bg-transparent" },
                 { label: "White", value: "bg-white" },
                 { label: "Black", value: "bg-black" },
                 { label: "Muted", value: "bg-blue-50" },
@@ -19,7 +20,7 @@ export const Section = {
         },
     },
     defaultProps: {
-        bgColor: "bg-white",
+        bgColor: "bg-transparent",
     },
     render: ({ bgColor, content: Content }) => {
         return (
