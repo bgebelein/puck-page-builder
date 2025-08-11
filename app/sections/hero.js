@@ -22,7 +22,7 @@ export const Hero = {
         subline: {
             label: "Subline",
             labelIcon: <Icon icon="lucide:type" />,
-            type: "text",
+            type: "textarea",
         },
         imgUrl: {
             label: "Image URL",
