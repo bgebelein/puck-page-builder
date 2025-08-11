@@ -58,7 +58,7 @@ export const Stack = {
     },
     render: ({ direction, horizontalAlignment, verticalAlignment, gap, content: Content }) => {
         return (
-            <Content className={`flex items-center ${direction} ${horizontalAlignment} ${verticalAlignment} ${gap}`} />
+            <Content className={`flex items-center flex-wrap ${direction} ${horizontalAlignment} ${verticalAlignment} ${gap}`} />
         );
     },
 }
