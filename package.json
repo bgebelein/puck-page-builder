@@ -1,0 +1,32 @@
+{
+  "name": "puck-test",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@measured/puck": "^0.19.3",
+    "@tailwindcss/postcss": "^4.1.11",
+    "classnames": "^2.3.2",
+    "postcss": "^8.5.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "@babel/preset-react": "^7.27.1",
+    "@iconify/react": "^6.0.0",
+    "@types/node": "^17.0.12",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.2",
+    "eslint-config-custom": "*",
+    "next": "^15.4.6",
+    "typescript": "^5.5.4"
+  }
+}

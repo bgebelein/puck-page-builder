@@ -1,0 +1,56 @@
+import { Icon } from "@iconify/react";
+
+export const Headline = {
+  label: "Headline",
+  fields: {
+    title: {
+      label: "Headline",
+      labelIcon: <Icon icon="lucide:heading" />,
+      type: "text",
+    },
+    hierarchy: {
+      label: "Hierarchy",
+      type: "select",
+      labelIcon: <Icon icon="lucide:list-ordered" />,
+      options: [
+        { label: "Headline 1", value: "h1" },
+        { label: "Headline 2", value: "h2" },
+        { label: "Headline 3", value: "h3" },
+        { label: "Headline 4", value: "h4" },
+        { label: "Headline 5", value: "h5" },
+        { label: "Headline 6", value: "h6" },
+      ],
+    },
+    alignment: {
+      type: "radio",
+      label: "Text Alignment",
+      labelIcon: <Icon icon="lucide:align-left" />,
+      options: [
+        { label: "Start", value: "text-left" },
+        { label: "Center", value: "text-center" },
+        { label: "End", value: "text-right" },
+      ],
+    },
+  },
+  defaultProps: {
+    title: "Headline",
+    hierarchy: "h1",
+    alignment: "text-left",
+  },
+  render: ({ title, hierarchy, alignment }) => {
+    switch (hierarchy) {
+      case "h1":
+        return <h1 className={`${alignment}`}>{title}</h1>;
+      case "h2":
+        return <h2 className={`${alignment}`}>{title}</h2>;
+      case "h3":
+        return <h3 className={`${alignment}`}>{title}</h3>;
+      case "h4":
+        return <h4 className={`${alignment}`}>{title}</h4>;
+      case "h5":
+        return <h5 className={`${alignment}`}>{title}</h5>;
+      case "h6":
+        return <h6 className={`${alignment}`}>{title}</h6>;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,600;1,600&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+  --font-lato: "Lato", sans-serif;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: var(--font-bold);
+    font-family: var(--font-poppins);
+    color: var(--color-slate-800);
+  }
+
+  h1 {
+    font-size: var(--text-6xl);
+  }
+
+  h2 {
+    font-size: var(--text-5xl);
+  }
+
+  h3 {
+    font-size: var(--text-4xl);
+  }
+
+  h4 {
+    font-size: var(--text-3xl);
+  }
+
+  h5 {
+    font-size: var(--text-2xl);
+  }
+
+  h6 {
+    font-size: var(--text-xl);
+  }
+
+  p,
+  a,
+  label {
+    font-family: var(--font-lato);
+    color: var(--color-slate-600);
+    font-size: var(--text-xl);
+    line-height: var(--leading-normal);
+  }
+
+  .iconify {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+@utility container {
+  margin: 0 auto;
+  padding-inline: 1rem;
+}
