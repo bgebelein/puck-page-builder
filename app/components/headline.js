@@ -7,6 +7,7 @@ export const Headline = {
       label: "Headline",
       labelIcon: <Icon icon="lucide:heading" />,
       type: "text",
+      placeholder: "Enter your headline here",
     },
     hierarchy: {
       label: "Hierarchy",
@@ -23,7 +24,7 @@ export const Headline = {
     },
     alignment: {
       type: "radio",
-      label: "Text Alignment",
+      label: "Alignment",
       labelIcon: <Icon icon="lucide:align-left" />,
       options: [
         { label: "Start", value: "text-left" },
