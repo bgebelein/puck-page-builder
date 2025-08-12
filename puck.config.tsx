@@ -7,6 +7,7 @@ import { Stack } from "./app/components/Stack";
 import { Spacer } from "./app/components/spacer";
 import { Hero } from "./app/sections/hero";
 import { Team } from "./app/sections/team";
+import { Card } from "./app/components/card";
 
 export const config: Config = {
   categories: {
@@ -16,7 +17,7 @@ export const config: Config = {
     },
     content: {
       title: "Content",
-      components: ["Headline", "Button"],
+      components: ["Headline", "Button", "Card"],
     },
     sections: {
       title: "Sections",
@@ -26,12 +27,13 @@ export const config: Config = {
   components: {
     Headline,
     Button,
+    Card,
     Section,
     Footer,
     Stack,
     Spacer,
     Hero,
-    Team
+    Team,
   },
 };
 
