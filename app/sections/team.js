@@ -76,7 +76,7 @@ export const Team = {
                 <div className="container">
                     <h2>{title}</h2>
                     <p>{subline}</p>
-                    <Content className={`grid lg:grid-cols-4 grid-cols-2 gap-8 mt-12`} />
+                    <Content className={`grid lg:grid-cols-4 grid-cols-2 gap-6 mt-12`} />
                 </div>
             </section>
         )
