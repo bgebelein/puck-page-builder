@@ -1,5 +1,6 @@
 import type { Config } from "@measured/puck";
 import { Headline } from "./app/components/headline";
+import { Bodytext } from "./app/components/bodytext";
 import { Section } from "./app/components/section";
 import { Button } from "./app/components/button";
 import { Footer } from "./app/sections/footer";
@@ -17,7 +18,7 @@ export const config: Config = {
     },
     content: {
       title: "Content",
-      components: ["Headline", "Button", "Card"],
+      components: ["Headline", "Bodytext", "Button", "Card"],
     },
     sections: {
       title: "Sections",
@@ -34,6 +35,7 @@ export const config: Config = {
     Spacer,
     Hero,
     Team,
+    Bodytext
   },
 };
 
