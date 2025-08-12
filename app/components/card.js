@@ -33,6 +33,7 @@ export const Card = {
                 label: "Card Type",
                 labelIcon: <Icon icon="lucide:square-equal" />,
                 options: [
+                    { label: "Text", value: "text" },
                     { label: "Image", value: "image" },
                     { label: "Icon", value: "icon" },
                 ],
@@ -65,6 +66,10 @@ export const Card = {
                     ],
                 },
             };
+        } else {
+            return {
+                ...fields,
+            };
         }
 
         return fields;
@@ -72,7 +77,7 @@ export const Card = {
     defaultProps: {
         bgColor: "bg-white",
         type: "icon",
-        imgUrl: "https://mockmind-api.uifaces.co/content/human/123.jpg",
+        imgUrl: "https://mockmind-api.uifaces.co/content/abstract/50.jpg",
         icon: "lucide:info",
         title: "Card Title",
         description: "This is a brief description of the card content.",
@@ -80,7 +85,7 @@ export const Card = {
     render: ({ bgColor, type, imgUrl, icon, title, description }) => {
         return (
             <div className={`card ${bgColor}`}>
-                {type === 'image' && <img src={imgUrl} alt={`${title} image`} title={`${title} image`} />}
+                {type === 'image' && <img src={imgUrl} alt={`${title} image`} title={`${title} image`} loading="lazy" />}
                 {type === 'icon' && (
                     <div className="bg-blue-700 text-white p-4 rounded-full inline-block mb-6">
                         <Icon icon={icon} />
