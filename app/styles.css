@@ -13,7 +13,7 @@
   h4,
   h5,
   h6 {
-    @apply font-bold font-poppins text-slate-800;
+    @apply font-bold font-poppins text-slate-800 leading-tight;
   }
 
   h1 {
