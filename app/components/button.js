@@ -4,10 +4,10 @@ const btnStyles = {
     base: "inline-flex gap-3 items-center px-4 py-3 rounded-xl text-xl font-medium border-2 transition-colors",
     disabled: "disabled:bg-slate-300 disabled:text-slate-500 disabled:cursor-not-allowed",
     themePrimary: "bg-theme text-white border-theme hover:bg-theme-hover hover:border-theme-hover active:bg-theme-active active:border-theme-active",
-    themeSecondary: "text-theme hover:bg-theme/5 active:bg-theme/10",
-    whitePrimary: "bg-white text-theme border-white hover:bg-white/90 active:bg-white/80",
-    whiteSecondary: "text-white hover:bg-white/10 active:bg-white/5",
-    ghost: "text-theme border-transparent hover:bg-theme/5 active:bg-theme/10",
+    themeSecondary: "text-theme hover:bg-theme/10 active:bg-theme/20",
+    whitePrimary: "bg-white text-theme border-white hover:bg-white/90 hover:border-white/90 active:bg-white/80 active:border-white/80",
+    whiteSecondary: "text-white hover:bg-white/10 active:bg-white/20",
+    ghost: "text-theme border-transparent hover:bg-theme/10 active:bg-theme/20",
 };
 
 export const Button = {
@@ -61,8 +61,6 @@ export const Button = {
         label: "Button",
         url: "#",
         style: btnStyles.themePrimary,
-        trailingIcon: "",
-        leadingIcon: "",
     },
     render: ({ url, style, label, trailingIcon, leadingIcon }) => {
         return (
