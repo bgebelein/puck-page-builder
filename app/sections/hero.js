@@ -9,9 +9,9 @@ export const Hero = {
             type: "select",
             options: [
                 { label: "White", value: "bg-white" },
-                { label: "Black", value: "bg-black text-white" },
+                { label: "Black", value: "bg-black" },
                 { label: "Muted", value: "bg-blue-50" },
-                { label: "Theme", value: "bg-blue-700 text-white" },
+                { label: "Theme", value: "bg-theme" },
             ],
         },
         title: {
