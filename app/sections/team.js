@@ -76,7 +76,7 @@ export const Team = {
                 <div className="container">
                     <h2>{title}</h2>
                     {subline && <p className="text-2xl">{subline}</p>}
-                    <Content className={`grid lg:grid-cols-4 grid-cols-2 gap-6 mt-12`} />
+                    <Content className={`grid grid-cols-[repeat(auto-fit,_minmax(240px,_1fr))] gap-6 mt-12`} />
                 </div>
             </section>
         )
