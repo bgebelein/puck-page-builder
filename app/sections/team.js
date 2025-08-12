@@ -13,8 +13,8 @@ export const Team = {
             type: "select",
             options: [
                 { label: "None", value: "bg-transparent" },
-                { label: "White", value: "bg-white" },
-                { label: "Black", value: "bg-black" },
+                { label: "Light", value: "bg-light" },
+                { label: "Dark", value: "bg-dark" },
                 { label: "Muted", value: "bg-muted" },
                 { label: "Theme", value: "bg-theme" },
             ],

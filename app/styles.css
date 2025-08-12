@@ -11,6 +11,8 @@
   --color-theme-hover: var(--color-blue-600);
   --color-theme-active: var(--color-blue-800);
   --color-muted: var(--color-blue-50);
+  --color-light: var(--color-slate-50);
+  --color-dark: var(--color-slate-950);
 }
 
 @layer base {
@@ -68,7 +70,7 @@
   }
 }
 
-.bg-white,
+.bg-light,
 .bg-muted,
 .bg-transparent {
   h1,
@@ -79,18 +81,14 @@
   h6 {
     @apply text-slate-800;
   }
-}
 
-.bg-black,
-.bg-theme {
-    @apply *:text-slate-50;
-}
-
-.bg-white,
-.bg-muted,
-.bg-transparent {
   p,
   label {
     @apply text-slate-600;
   }
+}
+
+.bg-dark,
+.bg-theme {
+    @apply *:text-slate-50;
 }

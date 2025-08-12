@@ -8,8 +8,8 @@ export const Hero = {
             labelIcon: <Icon icon="lucide:paint-bucket" />,
             type: "select",
             options: [
-                { label: "White", value: "bg-white" },
-                { label: "Black", value: "bg-black" },
+                { label: "light", value: "bg-light" },
+                { label: "dark", value: "bg-dark" },
                 { label: "Muted", value: "bg-muted" },
                 { label: "Theme", value: "bg-theme" },
             ],
