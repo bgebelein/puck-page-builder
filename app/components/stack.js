@@ -11,8 +11,8 @@ export const Stack = {
             label: "Direction",
             labelIcon: <Icon icon="lucide:move" />,
             options: [
-                { label: "Horizontal", value: "flex-row" },
-                { label: "Vertical", value: "flex-col" },
+                { label: "Horizontal", value: "grid-cols-[repeat(auto-fit,_minmax(240px,_1fr))]" },
+                { label: "Vertical", value: "grid-flow-row" },
             ],
         },
         horizontalAlignment: {
@@ -20,7 +20,7 @@ export const Stack = {
             label: "Horizontal Alignment",
             labelIcon: <Icon icon="lucide:align-center-horizontal" />,
             options: [
-                { label: "Start", value: "justsify-start" },
+                { label: "Start", value: "justify-start" },
                 { label: "Center", value: "justify-center" },
                 { label: "End", value: "justify-end" },
             ],
@@ -51,14 +51,14 @@ export const Stack = {
         },
     },
     defaultProps: {
-        direction: "flex-row",
+        direction: "grid-cols-[repeat(auto-fit,_minmax(240px,_1fr))]",
         verticalAlignment: "items-center",
         horizontalAlignment: "justify-center",
         gap: "gap-4",
     },
     render: ({ direction, horizontalAlignment, verticalAlignment, gap, content: Content }) => {
         return (
-            <Content className={`flex items-center flex-wrap ${direction} ${horizontalAlignment} ${verticalAlignment} ${gap}`} />
+            <Content className={`grid ${direction} ${horizontalAlignment} ${verticalAlignment} ${gap}`} />
         );
     },
 }
