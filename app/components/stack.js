@@ -21,7 +21,7 @@ export const Stack = {
             labelIcon: <Icon icon="lucide:align-center-horizontal" />,
             options: [
                 { label: "Start", value: "justify-start" },
-                { label: "Center", value: "justify-center" },
+                { label: "Center", value: "justify-center justify-items-center" },
                 { label: "End", value: "justify-end" },
             ],
         },
