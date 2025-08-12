@@ -14,11 +14,21 @@ export const Footer = {
                 { label: "Theme", value: "bg-theme" },
             ],
         },
+        text: {
+            label: "Text",
+            labelIcon: <Icon icon="lucide:type" />,
+            type: "text",
+            placeholder: "Your footer text here",
+        },
     },
-    render: ({ bgColor }) => {
+    defaultProps: {
+        bgColor: "bg-blac",
+        text: "© YYYY Your Company. All rights reserved.",
+    },
+    render: ({ bgColor, text }) => {
         return (
             <footer className={`py-4 flex items-center justify-around ${bgColor}`}>
-                <p className="text-slate-50">Made with <Icon icon="lucide:heart" className="mx-2 text-red-500" /> by Bent Gebelein</p>
+                <p className="text-slate-50">{text}</p>
             </footer>
         )
     },
