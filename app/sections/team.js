@@ -1,8 +1,20 @@
 import { Icon } from "@iconify/react";
+import { type } from "os";
+
+const gridCols = {
+    1: "xl:grid-cols-1",
+    2: "xl:grid-cols-2",
+    3: "xl:grid-cols-3",
+    4: "xl:grid-cols-4",
+}
 
 export const Team = {
     label: "Team",
     fields: {
+        content: {
+          type: "slot",
+          allow: ["Card"],
+        },
         bgColor: {
             label: "Background Color",
             labelIcon: <Icon icon="lucide:paint-bucket" />,
@@ -25,57 +37,63 @@ export const Team = {
             labelIcon: <Icon icon="lucide:type" />,
             type: "textarea",
         },
-        members: {
-            label: "Team Members",
-            labelIcon: <Icon icon="lucide:users" />,
-            type: "array",
-            arrayFields: {
-                name: {
-                    label: "Team Member Name",
-                    labelIcon: <Icon icon="lucide:user" />,
-                    type: "text"
-                },
-                portrait: {
-                    label: "Team Member Image URL",
-                    labelIcon: <Icon icon="lucide:link" />,
-                    type: "text"
-                },
-            },
+        columns: {
+            label: "Columns",
+            labelIcon: <Icon icon="lucide:columns-4" />,
+            type: "number",
+            placeholder: "Number of columns",
+            min: 1,
+            max: 4,
         },
     },
     defaultProps: {
         bgColor: "bg-transparent",
         title: "Team member introduction",
         subline: "Our team is made up of talented individuals who are passionate about what they do.",
-        members: [
+        columns: 3,
+        content: [
             {
-                name: "Alice Johnson",
-                portrait: "https://mockmind-api.uifaces.co/content/human/125.jpg",
+                type: "Card",
+                props: {
+                    type: "image",
+                    bgColor: "bg-white",
+                    imgUrl: "https://mockmind-api.uifaces.co/content/human/123.jpg",
+                    icon: "lucide:info",
+                    title: "Card Title",
+                    description: "This is a brief description of the card content.",
+                },
             },
             {
-                name: "Bob Smith",
-                portrait: "https://mockmind-api.uifaces.co/content/human/80.jpg",
+                type: "Card",
+                props: {
+                    type: "image",
+                    bgColor: "bg-white",
+                    imgUrl: "https://mockmind-api.uifaces.co/content/human/123.jpg",
+                    icon: "lucide:info",
+                    title: "Card Title",
+                    description: "This is a brief description of the card content.",
+                },
             },
             {
-                name: "Charlie Brown",
-                portrait: "https://mockmind-api.uifaces.co/content/human/104.jpg",
+                type: "Card",
+                props: {
+                    type: "image",
+                    bgColor: "bg-white",
+                    imgUrl: "https://mockmind-api.uifaces.co/content/human/123.jpg",
+                    icon: "lucide:info",
+                    title: "Card Title",
+                    description: "This is a brief description of the card content.",
+                },
             },
         ],
     },
-    render: ({ bgColor, title, subline, members }) => {
+    render: ({ bgColor, title, subline, columns, content: Content }) => {
         return (
             <section className={`py-30 ${bgColor}`}>
                 <div className="container">
                     <h2>{title}</h2>
                     <p>{subline}</p>
-                    <ul className="grid auto-cols-fr grid-flow-col gap-8 mt-12">
-                        {members.map((member, i) => (
-                            <li className="card flex flex-col items-center" key={i}>
-                                <img src={member.portrait} alt={member.name} className="w-24 h-24 rounded-full" />
-                                <h3>{member.name}</h3>
-                            </li>
-                        ))}
-                    </ul>
+                    <Content className={`grid ${gridCols[columns]} md:grid-cols-2 grid-cols-1 gap-8 mt-12`} />
                 </div>
             </section>
         )
