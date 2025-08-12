@@ -1,12 +1,4 @@
 import { Icon } from "@iconify/react";
-import { type } from "os";
-
-const gridCols = {
-    1: "xl:grid-cols-1",
-    2: "xl:grid-cols-2",
-    3: "xl:grid-cols-3",
-    4: "xl:grid-cols-4",
-}
 
 export const Team = {
     label: "Team",
@@ -22,9 +14,9 @@ export const Team = {
             options: [
                 { label: "None", value: "bg-transparent" },
                 { label: "White", value: "bg-white" },
-                { label: "Black", value: "bg-black text-white" },
+                { label: "Black", value: "bg-black" },
                 { label: "Muted", value: "bg-blue-50" },
-                { label: "Theme", value: "bg-blue-700 text-white" },
+                { label: "Theme", value: "bg-theme" },
             ],
         },
         title: {
@@ -37,20 +29,11 @@ export const Team = {
             labelIcon: <Icon icon="lucide:type" />,
             type: "textarea",
         },
-        columns: {
-            label: "Columns",
-            labelIcon: <Icon icon="lucide:columns-4" />,
-            type: "number",
-            placeholder: "Number of columns",
-            min: 1,
-            max: 4,
-        },
     },
     defaultProps: {
         bgColor: "bg-transparent",
         title: "Team member introduction",
         subline: "Our team is made up of talented individuals who are passionate about what they do.",
-        columns: 3,
         content: [
             {
                 type: "Card",
@@ -93,7 +76,7 @@ export const Team = {
                 <div className="container">
                     <h2>{title}</h2>
                     <p>{subline}</p>
-                    <Content className={`grid ${gridCols[columns]} md:grid-cols-2 grid-cols-1 gap-8 mt-12`} />
+                    <Content className={`grid lg:grid-cols-4 grid-cols-2 gap-8 mt-12`} />
                 </div>
             </section>
         )
