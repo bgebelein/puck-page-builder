@@ -3,29 +3,15 @@ import { FieldLabel } from "@measured/puck";
 
 const spacings = {
     1: "size-4",
-    2: "size-8",
-    3: "size-20",
-    4: "size-30",
+    2: "size-6",
+    3: "size-10",
+    4: "size-20",
     5: "size-40",
 }
 
 export const Spacer = {
     label: "Spacer",
     fields: {
-        // size: {
-        //     label: "Size",
-        //     labelIcon: <Icon icon="lucide:ruler" />,
-        //     type: "select",
-        //     options: [
-        //         { label: "None", value: "0" },
-        //         { label: "XS", value: "2" },
-        //         { label: "SM", value: "4" },
-        //         { label: "MD", value: "8" },
-        //         { label: "LG", value: "20" },
-        //         { label: "XL", value: "30" },
-        //         { label: "2XL", value: "40" },
-        //     ],
-        // },
         size: {
             type: "custom",
             label: "Size",
