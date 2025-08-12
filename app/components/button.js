@@ -3,10 +3,11 @@ import { Icon } from "@iconify/react";
 const btnStyles = {
     base: "inline-flex gap-3 items-center px-4 py-3 rounded-xl text-xl font-medium border-2 transition-colors",
     disabled: "disabled:bg-slate-300 disabled:text-slate-500 disabled:cursor-not-allowed",
-    themePrimary: "bg-blue-700 text-white border-blue-700 hover:bg-blue-600 active:bg-blue-800",
-    themeSecondary: "text-blue-700 hover:bg-blue-50 active:bg-blue-100",
-    whitePrimary: "bg-white text-blue-700 border-white hover:bg-blue-50 active:bg-blue-100",
+    themePrimary: "bg-theme text-white border-theme hover:bg-theme-hover hover:border-theme-hover active:bg-theme-active active:border-theme-active",
+    themeSecondary: "text-theme hover:bg-theme/5 active:bg-theme/10",
+    whitePrimary: "bg-white text-theme border-white hover:bg-white/90 active:bg-white/80",
     whiteSecondary: "text-white hover:bg-white/10 active:bg-white/5",
+    ghost: "text-theme border-transparent hover:bg-theme/5 active:bg-theme/10",
 };
 
 export const Button = {
@@ -32,6 +33,7 @@ export const Button = {
                 { label: "Theme Secondary", value: btnStyles.themeSecondary },
                 { label: "White Primary", value: btnStyles.whitePrimary },
                 { label: "White Secondary", value: btnStyles.whiteSecondary },
+                { label: "Ghost", value: btnStyles.ghost },
             ],
         },
         leadingIcon: {
@@ -62,7 +64,7 @@ export const Button = {
         trailingIcon: "",
         leadingIcon: "",
     },
-    render: ({ puck, url, style, label, trailingIcon, leadingIcon }) => {
+    render: ({ url, style, label, trailingIcon, leadingIcon }) => {
         return (
             <a className={`${btnStyles.base} ${btnStyles.disabled} ${style}`} href={url}>
                 {leadingIcon ? <Icon icon={leadingIcon} /> : null}
