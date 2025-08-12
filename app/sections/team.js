@@ -75,7 +75,7 @@ export const Team = {
             <section className={`py-30 ${bgColor}`}>
                 <div className="container">
                     <h2>{title}</h2>
-                    <p className="text-2xl">{subline}</p>
+                    {subline && <p className="text-2xl">{subline}</p>}
                     <Content className={`grid lg:grid-cols-4 grid-cols-2 gap-6 mt-12`} />
                 </div>
             </section>

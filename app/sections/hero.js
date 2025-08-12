@@ -40,8 +40,8 @@ export const Hero = {
             <div className={`pt-40 text-center ${bgColor}`}>
                 <div className="container">
                     <h1>{title}</h1>
-                    <p className="text-2xl">{subline}</p>
-                    <img className="mx-auto mt-20 rounded-t-xl shadow-2xl" src={imgUrl} alt="Hero Image" />
+                    {subline && <p className="text-2xl">{subline}</p>}
+                    {imgUrl && <img className="mx-auto mt-20 rounded-t-xl shadow-2xl" src={imgUrl} alt={`${title} hero image`} />}
                 </div>
             </div>
         )
