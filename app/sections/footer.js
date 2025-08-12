@@ -9,9 +9,9 @@ export const Footer = {
             type: "select",
             options: [
                 { label: "White", value: "bg-white" },
-                { label: "Black", value: "bg-black text-white" },
-                { label: "Muted", value: "bg-blue-50" },
-                { label: "Theme", value: "bg-blue-700 text-white" },
+                { label: "Black", value: "bg-black" },
+                { label: "Muted", value: "bg-muted" },
+                { label: "Theme", value: "bg-theme" },
             ],
         },
     },

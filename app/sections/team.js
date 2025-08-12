@@ -15,7 +15,7 @@ export const Team = {
                 { label: "None", value: "bg-transparent" },
                 { label: "White", value: "bg-white" },
                 { label: "Black", value: "bg-black" },
-                { label: "Muted", value: "bg-blue-50" },
+                { label: "Muted", value: "bg-muted" },
                 { label: "Theme", value: "bg-theme" },
             ],
         },

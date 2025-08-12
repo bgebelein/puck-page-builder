@@ -10,16 +10,27 @@
   --color-theme: var(--color-blue-700);
   --color-theme-hover: var(--color-blue-600);
   --color-theme-active: var(--color-blue-800);
+  --color-muted: var(--color-blue-50);
 }
 
 @layer base {
+  .container {
+    @apply max-w-7xl mx-auto px-3;
+  }
+
+  .card {
+    @apply p-8 rounded-2xl shadow-sm;
+  }
+}
+
+@layer components {
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    @apply font-bold font-poppins text-slate-800 leading-tight;
+    @apply font-bold font-poppins leading-tight;
   }
 
   h1 {
@@ -49,18 +60,37 @@
   p,
   a,
   label {
-    @apply font-lato text-slate-600 text-xl leading-normal;
+    @apply font-lato text-xl leading-normal;
   }
 
-  .container {
-    @apply max-w-7xl mx-auto px-3;
+  .iconify {
+    @apply inline-block size-6;
   }
 }
 
-.iconify {
-  @apply inline-block size-6;
+.bg-white,
+.bg-muted,
+.bg-transparent {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-slate-800;
+  }
 }
 
-.card {
-  @apply p-8 rounded-2xl shadow-sm;
+.bg-black,
+.bg-theme {
+    @apply *:text-slate-50;
+}
+
+.bg-white,
+.bg-muted,
+.bg-transparent {
+  p,
+  label {
+    @apply text-slate-600;
+  }
 }

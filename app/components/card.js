@@ -1,5 +1,4 @@
 import { Icon } from "@iconify/react";
-import { type } from "os";
 
 export const Card = {
     label: "Card",
@@ -23,9 +22,9 @@ export const Card = {
                 type: "select",
                 options: [
                     { label: "White", value: "bg-white" },
-                    { label: "Black", value: "bg-black text-white" },
-                    { label: "Muted", value: "bg-slate-50" },
-                    { label: "Theme", value: "bg-blue-700 text-white" },
+                    { label: "Black", value: "bg-black" },
+                    { label: "Muted", value: "bg-muted" },
+                    { label: "Theme", value: "bg-theme" },
                 ],
             },
             type: {
