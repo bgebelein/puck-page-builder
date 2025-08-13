@@ -2,13 +2,14 @@ import type { Config } from "@measured/puck";
 import { Headline } from "./app/components/headline";
 import { Bodytext } from "./app/components/bodytext";
 import { Section } from "./app/components/section";
-import { Button } from "./app/components/button";
+import { PuckButton } from "./app/components/button";
 import { Footer } from "./app/sections/footer";
 import { Stack } from "./app/components/Stack";
 import { Spacer } from "./app/components/spacer";
 import { Hero } from "./app/sections/hero";
 import { Team } from "./app/sections/team";
-import { Card } from "./app/components/card";
+import { PuckCard } from "./app/components/card";
+import { Header } from "./app/components/header";
 
 export const config: Config = {
   categories: {
@@ -18,7 +19,7 @@ export const config: Config = {
     },
     content: {
       title: "Content",
-      components: ["Headline", "Bodytext", "Button", "Card"],
+      components: ["Headline", "Bodytext", "PuckButton", "PuckCard"],
     },
     sections: {
       title: "Sections",
@@ -27,15 +28,22 @@ export const config: Config = {
   },
   components: {
     Headline,
-    Button,
-    Card,
+    PuckButton,
+    PuckCard,
     Section,
     Footer,
     Stack,
     Spacer,
     Hero,
     Team,
-    Bodytext
+    Bodytext,
+  },
+  root: {
+    render: (props: any) => {
+      return (
+          <main>{props.children}</main>
+      );
+    },
   },
 };
 
