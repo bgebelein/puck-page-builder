@@ -5,7 +5,7 @@ export const Team = {
     fields: {
         content: {
           type: "slot",
-          allow: ["Card"],
+          allow: ["PuckCard"],
         },
         bgColor: {
             label: "Background Color",
