@@ -37,7 +37,7 @@ export const Hero = {
     },
     render: ({ bgColor, title, subline, imgUrl }) => {
         return (
-            <div className={`pt-40 text-center ${bgColor}`}>
+            <div className={`pt-60 text-center ${bgColor}`}>
                 <div className="container">
                     <h1>{title}</h1>
                     {subline && <p className="text-2xl">{subline}</p>}
