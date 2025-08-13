@@ -10,7 +10,23 @@ const btnStyles = {
     ghost: "text-theme border-transparent hover:bg-theme/10 active:bg-theme/20",
 };
 
-export const Button = {
+export const Button = ({
+    label = "Button",
+    url = "#",
+    leadingIcon = "",
+    trailingIcon = "",
+    style = "themePrimary",
+}) => {
+    return (
+        <a className={`${btnStyles.base} ${btnStyles.disabled} ${btnStyles[style]}`} href={url}>
+            {leadingIcon && <Icon icon={leadingIcon} />}
+            {label}
+            {trailingIcon && <Icon icon={trailingIcon} />}
+        </a>
+    )
+}
+
+export const PuckButton = {
     label: "Button",
     fields: {
         label: {
@@ -29,11 +45,11 @@ export const Button = {
             labelIcon: <Icon icon="lucide:chevron-down" />,
             type: "select",
             options: [
-                { label: "Theme Primary", value: btnStyles.themePrimary },
-                { label: "Theme Secondary", value: btnStyles.themeSecondary },
-                { label: "White Primary", value: btnStyles.whitePrimary },
-                { label: "White Secondary", value: btnStyles.whiteSecondary },
-                { label: "Ghost", value: btnStyles.ghost },
+                { label: "Theme Primary", value: "themePrimary" },
+                { label: "Theme Secondary", value: "themeSecondary" },
+                { label: "White Primary", value: "whitePrimary" },
+                { label: "White Secondary", value: "whiteSecondary" },
+                { label: "Ghost", value: "ghost" },
             ],
         },
         leadingIcon: {
@@ -60,15 +76,11 @@ export const Button = {
     defaultProps: {
         label: "Button",
         url: "#",
-        style: btnStyles.themePrimary,
+        style: "themePrimary",
     },
     render: ({ url, style, label, trailingIcon, leadingIcon }) => {
         return (
-            <a className={`${btnStyles.base} ${btnStyles.disabled} ${style}`} href={url}>
-                {leadingIcon ? <Icon icon={leadingIcon} /> : null}
-                {label}
-                {trailingIcon ? <Icon icon={trailingIcon} /> : null}
-            </a>
+            <Button url={url} style={style} label={label} trailingIcon={trailingIcon} leadingIcon={leadingIcon} />
         );
     },
 };

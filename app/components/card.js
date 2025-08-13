@@ -1,6 +1,28 @@
 import { Icon } from "@iconify/react";
 
-export const Card = {
+export const Card = ({
+    bgColor = "bg-white",
+    type = "icon",
+    imgUrl = "https://mockmind-api.uifaces.co/content/abstract/50.jpg",
+    icon = "lucide:info",
+    title = "Card Title",
+    description = "This is a brief description of the card content.",
+}) => {
+    return (
+        <div className={`card ${bgColor}`}>
+            {type === 'image' && <img src={imgUrl} alt={`${title} image`} title={`${title} image`} loading="lazy" />}
+            {type === 'icon' && (
+                <div className="bg-blue-700 text-white p-4 rounded-full inline-block mb-6">
+                    <Icon icon={icon} />
+                </div>
+            )}
+            <h3>{title}</h3>
+            <p>{description}</p>
+        </div>
+    )
+}
+
+export const PuckCard = {
     label: "Card",
     resolveFields: (data) => {
         const fields = {
@@ -70,8 +92,6 @@ export const Card = {
                 ...fields,
             };
         }
-
-        return fields;
     },
     defaultProps: {
         bgColor: "bg-white",
@@ -83,16 +103,14 @@ export const Card = {
     },
     render: ({ bgColor, type, imgUrl, icon, title, description }) => {
         return (
-            <div className={`card ${bgColor}`}>
-                {type === 'image' && <img src={imgUrl} alt={`${title} image`} title={`${title} image`} loading="lazy" />}
-                {type === 'icon' && (
-                    <div className="bg-blue-700 text-white p-4 rounded-full inline-block mb-6">
-                        <Icon icon={icon} />
-                    </div>
-                )}
-                <h3>{title}</h3>
-                <p>{description}</p>
-            </div>
-        );
-    },
+            <Card
+                bgColor={bgColor}
+                type={type}
+                imgUrl={imgUrl}
+                icon={icon}
+                title={title}
+                description={description}
+            />
+        )
+    }
 }
