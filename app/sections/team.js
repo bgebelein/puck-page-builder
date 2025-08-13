@@ -4,8 +4,8 @@ export const Team = {
     label: "Team",
     fields: {
         content: {
-          type: "slot",
-          allow: ["PuckCard"],
+            type: "slot",
+            allow: ["PuckCard"],
         },
         bgColor: {
             label: "Background Color",
@@ -19,24 +19,33 @@ export const Team = {
                 { label: "Theme", value: "bg-theme" },
             ],
         },
-        title: {
-            label: "Headline",
-            labelIcon: <Icon icon="lucide:heading" />,
-            type: "text",
-        },
-        subline: {
-            label: "Subline",
-            labelIcon: <Icon icon="lucide:type" />,
-            type: "textarea",
+        intro: {
+            label: "Introduction",
+            labelIcon: <Icon icon="lucide:captions" />,
+            type: "object",
+            objectFields: {
+                title: {
+                    label: "Headline",
+                    labelIcon: <Icon icon="lucide:heading" />,
+                    type: "text",
+                },
+                subline: {
+                    label: "Subline",
+                    labelIcon: <Icon icon="lucide:type" />,
+                    type: "textarea",
+                },
+            }
         },
     },
     defaultProps: {
         bgColor: "bg-transparent",
-        title: "Team member introduction",
-        subline: "Our team is made up of talented individuals who are passionate about what they do.",
+        intro: {
+            title: "Team member introduction",
+            subline: "Our team is made up of talented individuals who are passionate about what they do.",
+        },
         content: [
             {
-                type: "Card",
+                type: "PuckCard",
                 props: {
                     type: "image",
                     bgColor: "bg-white",
@@ -47,7 +56,7 @@ export const Team = {
                 },
             },
             {
-                type: "Card",
+                type: "PuckCard",
                 props: {
                     type: "image",
                     bgColor: "bg-white",
@@ -58,7 +67,7 @@ export const Team = {
                 },
             },
             {
-                type: "Card",
+                type: "PuckCard",
                 props: {
                     type: "image",
                     bgColor: "bg-white",
@@ -70,12 +79,12 @@ export const Team = {
             },
         ],
     },
-    render: ({ bgColor, title, subline, columns, content: Content }) => {
+    render: ({ bgColor, intro, content: Content }) => {
         return (
             <section className={`py-30 ${bgColor}`}>
                 <div className="container">
-                    <h2>{title}</h2>
-                    {subline && <p className="text-2xl">{subline}</p>}
+                    <h2>{intro.title}</h2>
+                    {intro.subline && <p className="text-2xl">{intro.subline}</p>}
                     <Content className={`grid grid-cols-[repeat(auto-fit,_minmax(240px,_1fr))] gap-6 mt-12`} />
                 </div>
             </section>

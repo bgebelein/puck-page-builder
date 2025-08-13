@@ -14,34 +14,47 @@ export const Hero = {
                 { label: "Theme", value: "bg-theme" },
             ],
         },
-        title: {
-            label: "Headline",
-            labelIcon: <Icon icon="lucide:heading" />,
-            type: "text",
-        },
-        subline: {
-            label: "Subline",
-            labelIcon: <Icon icon="lucide:type" />,
-            type: "textarea",
-        },
-        imgUrl: {
-            label: "Image URL",
-            labelIcon: <Icon icon="lucide:image" />,
-            type: "text",
+        content: {
+            label: "Content",
+            labelIcon: <Icon icon="lucide:captions" />,
+            type: "object",
+            objectFields: {
+                title: {
+                    label: "Headline",
+                    labelIcon: <Icon icon="lucide:heading" />,
+                    type: "text",
+                    placeholder: "Your Hero Title",
+                },
+                subline: {
+                    label: "Subline",
+                    labelIcon: <Icon icon="lucide:type" />,
+                    type: "textarea",
+                    placeholder: "Your Hero Subline",
+                },
+                imgUrl: {
+                    label: "Image URL",
+                    labelIcon: <Icon icon="lucide:image" />,
+                    type: "text",
+                    placeholder: "Paste image URL here",
+                },
+            },
         },
     },
     defaultProps: {
         bgColor: "bg-blue-50",
-        title: "Welcome to Our Site",
-        subline: "Discover amazing content and features",
+        content: {
+            title: "Welcome to Our Site",
+            subline: "Discover amazing content and features",
+            imgUrl: "https://raw.githubusercontent.com/alan-crts/shadcn-iconpicker/refs/heads/main/public/preview.gif",
+        },
     },
-    render: ({ bgColor, title, subline, imgUrl }) => {
+    render: ({ bgColor, content, imgUrl }) => {
         return (
             <div className={`pt-60 text-center ${bgColor}`}>
                 <div className="container">
-                    <h1>{title}</h1>
-                    {subline && <p className="text-2xl">{subline}</p>}
-                    {imgUrl && <img className="mx-auto mt-20 rounded-t-xl shadow-2xl" src={imgUrl} alt={`${title} hero image`} />}
+                    <h1>{content.title}</h1>
+                    {content.subline && <p className="text-2xl">{content.subline}</p>}
+                    {content.imgUrl && <img className="mx-auto mt-20 rounded-t-xl shadow-2xl" src={content.imgUrl} alt={`${content.title} hero image`} />}
                 </div>
             </div>
         )
