@@ -11,14 +11,14 @@ export const Stack = {
             label: "Direction",
             labelIcon: <Icon icon="lucide:move" />,
             options: [
-                { label: "Horizontal", value: "grid-cols-[repeat(auto-fit,_minmax(240px,_1fr))]" },
-                { label: "Vertical", value: "grid-flow-row" },
+                { label: "Horizontal", value: "flex-row" },
+                { label: "Vertical", value: "flex-col" },
             ],
         },
         horizontalAlignment: {
             type: "radio",
             label: "Horizontal Alignment",
-            labelIcon: <Icon icon="lucide:align-center-horizontal" />,
+            labelIcon: <Icon icon="lucide:align-center-vertical" />,
             options: [
                 { label: "Start", value: "justify-start" },
                 { label: "Center", value: "justify-center justify-items-center" },
@@ -28,7 +28,7 @@ export const Stack = {
         verticalAlignment: {
             type: "radio",
             label: "Vertical Alignment",
-            labelIcon: <Icon icon="lucide:align-center-vertical" />,
+            labelIcon: <Icon icon="lucide:align-center-horizontal" />,
             options: [
                 { label: "Start", value: "items-start" },
                 { label: "Center", value: "items-center" },
@@ -51,14 +51,14 @@ export const Stack = {
         },
     },
     defaultProps: {
-        direction: "grid-cols-[repeat(auto-fit,_minmax(240px,_1fr))]",
+        direction: "flex-row",
         verticalAlignment: "items-center",
-        horizontalAlignment: "justify-center",
+        horizontalAlignment: "justify-center justify-items-center",
         gap: "gap-4",
     },
     render: ({ direction, horizontalAlignment, verticalAlignment, gap, content: Content }) => {
         return (
-            <Content className={`grid ${direction} ${horizontalAlignment} ${verticalAlignment} ${gap}`} />
+            <Content className={`flex flex-wrap *:grow *:basis-0 ${direction} ${horizontalAlignment} ${verticalAlignment} ${gap}`} />
         );
     },
 }
