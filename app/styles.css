@@ -17,10 +17,7 @@
 
 @utility container {
   margin: 0 auto;
-  
-  @variant sm {
-    padding: 0 1rem;
-  }
+  padding: 0 1rem;
 
   @variant md {
     padding: 0 1.5rem;
