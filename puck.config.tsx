@@ -9,6 +9,7 @@ import { Spacer } from "./app/components/spacer";
 import { Hero } from "./app/sections/hero";
 import { Team } from "./app/sections/team";
 import { PuckCard } from "./app/components/card";
+import { PuckHeader } from "./app/components/header";
 
 export const config: Config = {
   categories: {
@@ -24,6 +25,10 @@ export const config: Config = {
       title: "Sections",
       components: ["Hero", "Team", "Footer"],
     },
+    hidden: {
+      components: ["PuckHeader"],
+      visible: false,
+    },
   },
   components: {
     Headline,
@@ -36,6 +41,24 @@ export const config: Config = {
     Hero,
     Team,
     Bodytext,
+    PuckHeader,
+  },
+  root: {
+    fields: {
+      content: {
+        type: "slot",
+      },
+    },
+    defaultProps: {
+      content: [
+        {
+          type: "PuckHeader",
+        },
+      ],
+    },
+    render: ({ content: Content }) => {
+      return <Content />;
+    },
   },
 };
 
