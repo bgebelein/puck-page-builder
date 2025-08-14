@@ -37,7 +37,7 @@ export function Client({ path, data }: { path: string; data: Partial<Data> }) {
           icon: <Icon icon="tabler:device-laptop" />,
         },
         {
-          width: 1536,
+          width: "100%",
           height: "auto",
           label: "2XL",
           icon: <Icon icon="tabler:device-desktop" />,
