@@ -1,4 +1,5 @@
 import { Button } from "./button";
+import { Icon } from "@iconify/react";
 
 export const Header = ({
     logo,
@@ -12,8 +13,8 @@ export const Header = ({
     }
 }) => {
     return (
-        <header className="fixed top-8 left-1/2 -translate-x-1/2 z-10 w-full px-8">
-            <div className="container flex items-center justify-between bg-white p-4 rounded-2xl shadow-2xl">
+        <header className="bg-white p-4 shadow-2xl">
+            <div className="container flex items-center justify-between">
                 {logo && <img className="max-h-12" src={logo} alt="Logo" title="Logo" />}
                 <nav>
                     <menu className="flex items-center gap-6">
@@ -57,60 +58,88 @@ export const PuckHeader = {
                 },
             },
         },
-        label: {
-            type: "text",
-            label: "Label",
-            labelIcon: <Icon icon="lucide:type" />,
-            placeholder: "Button Label",
-        },
-        url: {
-            label: "URL",
-            labelIcon: <Icon icon="lucide:link" />,
-            type: "text"
-        },
-        style: {
-            label: "Style",
-            labelIcon: <Icon icon="lucide:chevron-down" />,
-            type: "select",
-            options: [
-                { label: "Theme Primary", value: "themePrimary" },
-                { label: "Theme Secondary", value: "themeSecondary" },
-                { label: "White Primary", value: "whitePrimary" },
-                { label: "White Secondary", value: "whiteSecondary" },
-                { label: "Ghost", value: "ghost" },
-            ],
-        },
-        leadingIcon: {
-            type: "select",
-            label: "Leading Icon",
-            labelIcon: <Icon icon="lucide:circle" />,
-            options: [
-                { label: "None", value: "" },
-                { label: "arrow-left", value: "tabler:arrow-narrow-left" },
-                { label: "arrow-right", value: "tabler:arrow-narrow-right" },
-            ],
-        },
-        trailingIcon: {
-            type: "select",
-            label: "Trailing Icon",
-            labelIcon: <Icon icon="lucide:circle" />,
-            options: [
-                { label: "None", value: "" },
-                { label: "arrow-left", value: "tabler:arrow-narrow-left" },
-                { label: "arrow-right", value: "tabler:arrow-narrow-right" },
-            ],
-        },
+        button: {
+            label: "Button",
+            labelIcon: <Icon icon="lucide:captions" />,
+            type: "object",
+            objectFields: {
+                label: {
+                    type: "text",
+                    label: "Label",
+                    labelIcon: <Icon icon="lucide:type" />,
+                    placeholder: "Button Label",
+                },
+                url: {
+                    label: "URL",
+                    labelIcon: <Icon icon="lucide:link" />,
+                    type: "text"
+                },
+                style: {
+                    label: "Style",
+                    labelIcon: <Icon icon="lucide:chevron-down" />,
+                    type: "select",
+                    options: [
+                        { label: "Theme Primary", value: "themePrimary" },
+                        { label: "Theme Secondary", value: "themeSecondary" },
+                        { label: "White Primary", value: "whitePrimary" },
+                        { label: "White Secondary", value: "whiteSecondary" },
+                        { label: "Ghost", value: "ghost" },
+                    ],
+                },
+                leadingIcon: {
+                    type: "select",
+                    label: "Leading Icon",
+                    labelIcon: <Icon icon="lucide:circle" />,
+                    options: [
+                        { label: "None", value: "" },
+                        { label: "arrow-left", value: "tabler:arrow-narrow-left" },
+                        { label: "arrow-right", value: "tabler:arrow-narrow-right" },
+                    ],
+                },
+                trailingIcon: {
+                    type: "select",
+                    label: "Trailing Icon",
+                    labelIcon: <Icon icon="lucide:circle" />,
+                    options: [
+                        { label: "None", value: "" },
+                        { label: "arrow-left", value: "tabler:arrow-narrow-left" },
+                        { label: "arrow-right", value: "tabler:arrow-narrow-right" },
+                    ],
+                },
+            }
+        }
     },
-    render: ({ navitems }) => {
+    defaultProps: {
+        logo: "https://cdn.brandfetch.io/idOPDYImH9/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667644681223",
+        navitems: [
+            { label: "Home", url: "#" },
+            { label: "About", url: "#" },
+            { label: "Services", url: "#" },
+            { label: "Contact", url: "#" },
+        ],
+        button: {
+            label: "Contact Us",
+            url: "#",
+            style: "themePrimary",
+            leadingIcon: "lucide:phone-call",
+            trailingIcon: "",
+        }
+    },
+    permissions: {
+        delete: false,
+        drag: false,
+        duplicate: false,
+    },
+    render: ({ logo, navitems, button }) => {
         return <Header
             logo={logo}
             navitems={navitems}
             ctaButton={{
-                label: label,
-                url: url,
-                style: style,
-                leadingIcon: leadingIcon,
-                trailingIcon: trailingIcon,
+                label: button.label,
+                url: button.url,
+                style: button.style,
+                leadingIcon: button.leadingIcon,
+                trailingIcon: button.trailingIcon,
             }}
         />;
     }
