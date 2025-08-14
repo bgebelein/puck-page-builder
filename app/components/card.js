@@ -12,7 +12,7 @@ export const Card = ({
         <div className={`p-8 rounded-2xl shadow-sm ${bgColor}`}>
             {type === 'image' && <img src={imgUrl} alt={`${title} image`} title={`${title} image`} loading="lazy" />}
             {type === 'icon' && (
-                <div className="bg-blue-700 text-white p-4 rounded-full inline-block mb-6">
+                <div className="bg-theme text-white p-4 rounded-full inline-block mb-6">
                     <Icon icon={icon} />
                 </div>
             )}
