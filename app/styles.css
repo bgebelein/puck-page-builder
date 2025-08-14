@@ -22,13 +22,13 @@
   @variant md {
     padding: 0 1.5rem;
   }
-  
+
   @variant xl {
     padding: 0 2rem;
   }
-  
+
   @variant 2xl {
-    max-width: 1280px
+    max-width: 1280px;
   }
 }
 
@@ -99,5 +99,5 @@
 
 .bg-dark,
 .bg-theme {
-    @apply *:text-slate-50;
+  @apply *:text-slate-50;
 }

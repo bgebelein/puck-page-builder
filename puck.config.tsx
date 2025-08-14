@@ -13,6 +13,7 @@ import { PuckHeader } from "./app/components/header";
 import { Collapsible } from "./app/components/collapsible";
 import { Faq } from "./app/sections/faq";
 import { Stats } from "./app/sections/stats";
+import { Callout } from "./app/components/callout";
 
 export const config: Config = {
   categories: {
@@ -28,6 +29,7 @@ export const config: Config = {
         "PuckButton",
         "PuckCard",
         "Collapsible",
+        "Callout",
       ],
     },
     sections: {
@@ -54,6 +56,7 @@ export const config: Config = {
     Collapsible,
     Faq,
     Stats,
+    Callout,
   },
   root: {
     fields: {
