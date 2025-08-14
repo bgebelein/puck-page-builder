@@ -111,7 +111,7 @@ export const Faq = {
                         <h2>{intro.title}</h2>
                         {intro.subline && <p className="text-2xl mb-12">{intro.subline}</p>}
                     </div>
-                    <Content className="flex flex-col gap-6" />
+                    <Content className="flex flex-col gap-4 md:gap-6" />
                 </div>
             </section>
         )

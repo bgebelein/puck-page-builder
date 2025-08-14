@@ -93,7 +93,7 @@ export const Team = {
                         <h2>{intro.title}</h2>
                         {intro.subline && <p className="text-2xl">{intro.subline}</p>}
                     </div>
-                    <Content className={`grid grid-cols-[repeat(auto-fit,_minmax(240px,_1fr))] gap-6 mt-12`} />
+                    <Content className={`grid grid-cols-[repeat(auto-fit,_minmax(240px,_1fr))] gap-4 md:gap-6 mt-12`} />
                 </div>
             </section>
         )
