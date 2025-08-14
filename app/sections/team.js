@@ -19,6 +19,11 @@ export const Team = {
                 { label: "Theme", value: "bg-theme" },
             ],
         },
+        anchorId: {
+            label: "ID",
+            labelIcon: <Icon icon="lucide:hash" />,
+            type: "text",
+        },
         intro: {
             label: "Introduction",
             labelIcon: <Icon icon="lucide:captions" />,
@@ -38,7 +43,8 @@ export const Team = {
         },
     },
     defaultProps: {
-        bgColor: "bg-light",
+        bgColor: "bg-transparent",
+        anchorId: "team",
         intro: {
             title: "Team member introduction",
             subline: "Our team is made up of talented individuals who are passionate about what they do.",
@@ -79,12 +85,14 @@ export const Team = {
             },
         ],
     },
-    render: ({ bgColor, intro, content: Content }) => {
+    render: ({ bgColor, anchorId, intro, content: Content }) => {
         return (
-            <section className={`py-30 ${bgColor}`}>
+            <section id={anchorId} className={`py-30 ${bgColor}`}>
                 <div className="container">
-                    <h2>{intro.title}</h2>
-                    {intro.subline && <p className="text-2xl">{intro.subline}</p>}
+                    <div className="max-w-4xl">
+                        <h2>{intro.title}</h2>
+                        {intro.subline && <p className="text-2xl">{intro.subline}</p>}
+                    </div>
                     <Content className={`grid grid-cols-[repeat(auto-fit,_minmax(240px,_1fr))] gap-6 mt-12`} />
                 </div>
             </section>
