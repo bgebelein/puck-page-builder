@@ -9,7 +9,7 @@ export const Card = ({
     description = "This is a brief description of the card content.",
 }) => {
     return (
-        <div className={`card ${bgColor}`}>
+        <div className={`p-8 rounded-2xl shadow-sm ${bgColor}`}>
             {type === 'image' && <img src={imgUrl} alt={`${title} image`} title={`${title} image`} loading="lazy" />}
             {type === 'icon' && (
                 <div className="bg-blue-700 text-white p-4 rounded-full inline-block mb-6">
@@ -43,6 +43,7 @@ export const PuckCard = {
                 labelIcon: <Icon icon="lucide:paint-bucket" />,
                 type: "select",
                 options: [
+                    { label: "White", value: "bg-white" },
                     { label: "Light", value: "bg-light" },
                     { label: "Dark", value: "bg-dark" },
                     { label: "Muted", value: "bg-muted" },
@@ -94,7 +95,7 @@ export const PuckCard = {
         }
     },
     defaultProps: {
-        bgColor: "bg-white",
+        bgColor: "bg-light",
         type: "icon",
         imgUrl: "https://mockmind-api.uifaces.co/content/abstract/50.jpg",
         icon: "lucide:info",
