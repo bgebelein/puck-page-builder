@@ -50,7 +50,7 @@ export const Hero = {
     },
     render: ({ bgColor, content, imgUrl }) => {
         return (
-            <div className={`pt-60 text-center ${bgColor}`}>
+            <div className={`pt-30 text-center ${bgColor}`}>
                 <div className="container">
                     <h1>{content.title}</h1>
                     {content.subline && <p className="text-2xl">{content.subline}</p>}
