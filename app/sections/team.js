@@ -38,7 +38,7 @@ export const Team = {
         },
     },
     defaultProps: {
-        bgColor: "bg-transparent",
+        bgColor: "bg-light",
         intro: {
             title: "Team member introduction",
             subline: "Our team is made up of talented individuals who are passionate about what they do.",
@@ -49,7 +49,7 @@ export const Team = {
                 props: {
                     type: "image",
                     bgColor: "bg-white",
-                    imgUrl: "https://mockmind-api.uifaces.co/content/human/123.jpg",
+                    imgUrl: "https://mockmind-api.uifaces.co/content/abstract/50.jpg",
                     icon: "lucide:info",
                     title: "Card Title",
                     description: "This is a brief description of the card content.",
@@ -60,7 +60,7 @@ export const Team = {
                 props: {
                     type: "image",
                     bgColor: "bg-white",
-                    imgUrl: "https://mockmind-api.uifaces.co/content/human/123.jpg",
+                    imgUrl: "https://mockmind-api.uifaces.co/content/abstract/49.jpg",
                     icon: "lucide:info",
                     title: "Card Title",
                     description: "This is a brief description of the card content.",
@@ -71,7 +71,7 @@ export const Team = {
                 props: {
                     type: "image",
                     bgColor: "bg-white",
-                    imgUrl: "https://mockmind-api.uifaces.co/content/human/123.jpg",
+                    imgUrl: "https://mockmind-api.uifaces.co/content/abstract/47.jpg",
                     icon: "lucide:info",
                     title: "Card Title",
                     description: "This is a brief description of the card content.",
