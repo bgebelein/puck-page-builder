@@ -9,7 +9,6 @@ import { Spacer } from "./app/components/spacer";
 import { Hero } from "./app/sections/hero";
 import { Team } from "./app/sections/team";
 import { PuckCard } from "./app/components/card";
-import { Header } from "./app/components/header";
 
 export const config: Config = {
   categories: {
@@ -37,13 +36,6 @@ export const config: Config = {
     Hero,
     Team,
     Bodytext,
-  },
-  root: {
-    render: (props: any) => {
-      return (
-          <main>{props.children}</main>
-      );
-    },
   },
 };
 
