@@ -22,7 +22,7 @@ export const Footer = {
         },
     },
     defaultProps: {
-        bgColor: "bg-blac",
+        bgColor: "bg-dark",
         text: "© YYYY Your Company. All rights reserved.",
     },
     render: ({ bgColor, text }) => {
