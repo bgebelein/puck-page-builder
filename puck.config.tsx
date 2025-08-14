@@ -10,6 +10,8 @@ import { Hero } from "./app/sections/hero";
 import { Team } from "./app/sections/team";
 import { PuckCard } from "./app/components/card";
 import { PuckHeader } from "./app/components/header";
+import { Collapsible } from "./app/components/collapsible";
+import { Faq } from "./app/sections/faq";
 
 export const config: Config = {
   categories: {
@@ -19,11 +21,11 @@ export const config: Config = {
     },
     content: {
       title: "Content",
-      components: ["Headline", "Bodytext", "PuckButton", "PuckCard"],
+      components: ["Headline", "Bodytext", "PuckButton", "PuckCard", "Collapsible"],
     },
     sections: {
       title: "Sections",
-      components: ["Hero", "Team", "Footer"],
+      components: ["Hero", "Team", "Faq", "Footer"],
     },
     hidden: {
       components: ["PuckHeader"],
@@ -42,6 +44,8 @@ export const config: Config = {
     Team,
     Bodytext,
     PuckHeader,
+    Collapsible,
+    Faq,
   },
   root: {
     fields: {
