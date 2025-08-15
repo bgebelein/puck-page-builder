@@ -13,7 +13,7 @@ export const Header = ({
     }
 }) => {
     return (
-        <header className="bg-white p-4 shadow-2xl">
+        <header className="bg-white p-4 relative z-10 shadow-lg">
             <div className="container flex items-center justify-between">
                 {logo && <img className="max-h-12" src={logo} alt="Logo" title="Logo" />}
                 <nav>
