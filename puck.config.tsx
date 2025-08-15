@@ -58,23 +58,6 @@ export const config: Config = {
     Stats,
     Callout,
   },
-  root: {
-    fields: {
-      content: {
-        type: "slot",
-      },
-    },
-    defaultProps: {
-      content: [
-        {
-          type: "PuckHeader",
-        },
-      ],
-    },
-    render: ({ content: Content }) => {
-      return <Content />;
-    },
-  },
 };
 
 export default config;
