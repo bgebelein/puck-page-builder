@@ -24,12 +24,14 @@ export const Hero = {
                     labelIcon: <Icon icon="lucide:heading" />,
                     type: "text",
                     placeholder: "Your Hero Title",
+                    contentEditable: true,
                 },
                 subline: {
                     label: "Subline",
                     labelIcon: <Icon icon="lucide:type" />,
                     type: "textarea",
                     placeholder: "Your Hero Subline",
+                    contentEditable: true,
                 },
                 imgUrl: {
                     label: "Image URL",

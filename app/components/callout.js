@@ -46,6 +46,7 @@ export const Callout = {
             labelIcon: <Icon icon="lucide:type" />,
             type: "textarea",
             placeholder: "Your Callout Text",
+            contentEditable: true,
         },
     },
     defaultProps: {

@@ -8,6 +8,7 @@ export const Bodytext = {
       labelIcon: <Icon icon="lucide:type" />,
       type: "textarea",
       placeholder: "Enter your text here",
+      contentEditable: true,
     },
     size: {
       type: "radio",

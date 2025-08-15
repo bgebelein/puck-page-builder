@@ -31,12 +31,14 @@ export const PuckCard = {
                 label: "Title",
                 labelIcon: <Icon icon="lucide:type" />,
                 placeholder: "Card Title",
+                contentEditable: true,
             },
             description: {
                 type: "textarea",
                 label: "Description",
                 labelIcon: <Icon icon="lucide:type" />,
                 placeholder: "Brief description of the card content.",
+                contentEditable: true,
             },
             bgColor: {
                 label: "Background Color",

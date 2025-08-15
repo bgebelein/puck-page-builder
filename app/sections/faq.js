@@ -33,11 +33,13 @@ export const Faq = {
                     label: "Headline",
                     labelIcon: <Icon icon="lucide:heading" />,
                     type: "text",
+                    contentEditable: true,
                 },
                 subline: {
                     label: "Subline",
                     labelIcon: <Icon icon="lucide:type" />,
                     type: "textarea",
+                    contentEditable: true,
                 },
             }
         },

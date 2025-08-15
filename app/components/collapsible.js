@@ -12,6 +12,7 @@ export const Collapsible = {
             labelIcon: <Icon icon="lucide:type" />,
             type: "text",
             placeholder: "Enter your text here",
+            contentEditable: true,
         },
         bgColor: {
             label: "Background Color",

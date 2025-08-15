@@ -8,6 +8,7 @@ export const Headline = {
       labelIcon: <Icon icon="lucide:heading" />,
       type: "text",
       placeholder: "Enter your headline here",
+      contentEditable: true,
     },
     hierarchy: {
       label: "Hierarchy",

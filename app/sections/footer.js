@@ -19,6 +19,7 @@ export const Footer = {
             labelIcon: <Icon icon="lucide:type" />,
             type: "text",
             placeholder: "Your footer text here",
+            contentEditable: true,
         },
     },
     defaultProps: {

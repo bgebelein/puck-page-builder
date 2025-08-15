@@ -34,6 +34,7 @@ export const PuckButton = {
             label: "Label",
             labelIcon: <Icon icon="lucide:type" />,
             placeholder: "Button Label",
+            contentEditable: true,
         },
         url: {
             label: "URL",
