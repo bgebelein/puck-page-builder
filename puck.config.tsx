@@ -37,9 +37,11 @@ export const config: Config = {
       components: ["Hero", "Stats", "Team", "Faq", "Footer"],
     },
     hidden: {
-      components: ["PuckHeader"],
       visible: false,
+      components: ["PuckHeader"],
     },
+    // Fix to hide the "Other" category in the UI
+    other: { components: [], visible: false },
   },
   components: {
     Headline,
