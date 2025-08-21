@@ -4,7 +4,7 @@ import { Bodytext } from "./app/components/bodytext";
 import { Section } from "./app/components/section";
 import { PuckButton } from "./app/components/button";
 import { Footer } from "./app/sections/footer";
-import { Stack } from "./app/components/Stack";
+import { Stack } from "./app/components/stack";
 import { Spacer } from "./app/components/spacer";
 import { Hero } from "./app/sections/hero";
 import { Team } from "./app/sections/team";

@@ -1,3 +1,4 @@
+import { ComponentConfig } from "@measured/puck";
 import { Icon } from "@iconify/react";
 
 const btnStyles = {
@@ -26,7 +27,7 @@ export const Button = ({
     )
 }
 
-export const PuckButton = {
+export const PuckButton: ComponentConfig = {
     label: "Button",
     fields: {
         label: {

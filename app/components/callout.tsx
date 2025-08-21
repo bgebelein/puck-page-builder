@@ -1,3 +1,4 @@
+import { ComponentConfig } from "@measured/puck";
 import { Icon } from "@iconify/react";
 
 const calloutStyles = {
@@ -27,7 +28,7 @@ const calloutIcons = {
     },
 };
 
-export const Callout = {
+export const Callout: ComponentConfig = {
     label: "Callout",
     fields: {
         variant: {

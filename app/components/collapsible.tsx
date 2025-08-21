@@ -1,6 +1,7 @@
+import { ComponentConfig } from "@measured/puck";
 import { Icon } from "@iconify/react";
 
-export const Collapsible = {
+export const Collapsible: ComponentConfig = {
     label: "Collapsible",
     fields: {
         content: {

@@ -1,6 +1,7 @@
+import { ComponentConfig } from "@measured/puck";
 import { Icon } from "@iconify/react";
 
-export const Headline = {
+export const Headline: ComponentConfig = {
   label: "Headline",
   fields: {
     title: {

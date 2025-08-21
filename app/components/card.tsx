@@ -1,3 +1,4 @@
+import { ComponentConfig } from "@measured/puck";
 import { Icon } from "@iconify/react";
 
 export const Card = ({
@@ -22,7 +23,7 @@ export const Card = ({
     )
 }
 
-export const PuckCard = {
+export const PuckCard: ComponentConfig = {
     label: "Card",
     resolveFields: (data) => {
         const fields = {

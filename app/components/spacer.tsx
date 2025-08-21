@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react";
-import { FieldLabel } from "@measured/puck";
+import { ComponentConfig } from "@measured/puck";
 
 const spacings = {
     1: "size-4",
@@ -9,7 +9,7 @@ const spacings = {
     5: "size-40",
 }
 
-export const Spacer = {
+export const Spacer: ComponentConfig = {
     label: "Spacer",
     fields: {
         size: {

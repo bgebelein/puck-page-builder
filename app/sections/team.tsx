@@ -1,7 +1,8 @@
+import { ComponentConfig } from "@measured/puck";
 import { Icon } from "@iconify/react";
 
-export const Stats = {
-    label: "Stats",
+export const Team: ComponentConfig = {
+    label: "Team",
     fields: {
         content: {
             type: "slot",
@@ -46,43 +47,43 @@ export const Stats = {
     },
     defaultProps: {
         bgColor: "bg-transparent",
-        anchorId: "stats",
+        anchorId: "team",
         intro: {
-            title: "Trusted by thousands of users worldwide",
-            subline: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+            title: "Team member introduction",
+            subline: "Our team is made up of talented individuals who are passionate about what they do.",
         },
         content: [
             {
                 type: "PuckCard",
                 props: {
-                    type: "icon",
+                    type: "image",
                     bgColor: "bg-white",
                     imgUrl: "https://mockmind-api.uifaces.co/content/abstract/50.jpg",
                     icon: "lucide:info",
-                    title: "XX",
-                    description: "Amazing statistic 1",
+                    title: "Card Title",
+                    description: "This is a brief description of the card content.",
                 },
             },
             {
                 type: "PuckCard",
                 props: {
-                    type: "icon",
+                    type: "image",
                     bgColor: "bg-white",
                     imgUrl: "https://mockmind-api.uifaces.co/content/abstract/49.jpg",
                     icon: "lucide:info",
-                    title: "XX",
-                    description: "Amazing statistic 2",
+                    title: "Card Title",
+                    description: "This is a brief description of the card content.",
                 },
             },
             {
                 type: "PuckCard",
                 props: {
-                    type: "icon",
+                    type: "image",
                     bgColor: "bg-white",
                     imgUrl: "https://mockmind-api.uifaces.co/content/abstract/47.jpg",
                     icon: "lucide:info",
-                    title: "XX",
-                    description: "Amazing statistic 3",
+                    title: "Card Title",
+                    description: "This is a brief description of the card content.",
                 },
             },
         ],
@@ -90,12 +91,12 @@ export const Stats = {
     render: ({ bgColor, anchorId, intro, content: Content }) => {
         return (
             <section id={anchorId} className={`py-30 ${bgColor}`}>
-                <div className="container grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                <div className="container">
                     <div className="max-w-4xl">
                         <h2>{intro.title}</h2>
-                        {intro.subline && <p className="text-2xl mb-12">{intro.subline}</p>}
+                        {intro.subline && <p className="text-2xl">{intro.subline}</p>}
                     </div>
-                    <Content className="grid grid-cols-12 *:[&:nth-child(4n-3)]:col-span-7 *:[&:nth-child(4n-2)]:col-span-5 *:[&:nth-child(4n-1)]:col-span-5 *:[&:nth-child(4n-1)]:last:col-span-12 *:[&:nth-child(4n)]:col-span-7 gap-4 md:gap-6" />
+                    <Content className={`grid grid-cols-[repeat(auto-fit,_minmax(240px,_1fr))] gap-4 md:gap-6 mt-12`} />
                 </div>
             </section>
         )

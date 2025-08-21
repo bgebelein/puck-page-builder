@@ -1,6 +1,7 @@
+import { ComponentConfig } from "@measured/puck";
 import { Icon } from "@iconify/react";
 
-export const Section = {
+export const Section: ComponentConfig = {
     label: "Section",
     fields: {
         content: {

@@ -1,6 +1,7 @@
+import { ComponentConfig } from "@measured/puck";
 import { Icon } from "@iconify/react";
 
-export const Bodytext = {
+export const Bodytext: ComponentConfig = {
   label: "Text",
   fields: {
     text: {

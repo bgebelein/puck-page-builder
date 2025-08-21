@@ -1,6 +1,7 @@
+import { ComponentConfig } from "@measured/puck";
 import { Icon } from "@iconify/react";
 
-export const Hero = {
+export const Hero: ComponentConfig = {
     label: "Hero",
     fields: {
         bgColor: {

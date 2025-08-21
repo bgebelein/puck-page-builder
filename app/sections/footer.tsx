@@ -1,6 +1,7 @@
+import { ComponentConfig } from "@measured/puck";
 import { Icon } from "@iconify/react";
 
-export const Footer = {
+export const Footer: ComponentConfig = {
     label: "Footer",
     fields: {
         bgColor: {

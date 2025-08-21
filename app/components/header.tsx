@@ -1,3 +1,4 @@
+import { ComponentConfig } from "@measured/puck";
 import { Button } from "./button";
 import { Icon } from "@iconify/react";
 
@@ -39,7 +40,7 @@ export const Header = ({
     )
 }
 
-export const PuckHeader = {
+export const PuckHeader: ComponentConfig = {
     label: "Header",
     fields: {
         logo: {
