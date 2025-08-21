@@ -28,14 +28,14 @@ export const PuckCard: ComponentConfig = {
     resolveFields: (data) => {
         const fields = {
             title: {
-                type: "text",
+                type: "text" as const,
                 label: "Title",
                 labelIcon: <Icon icon="lucide:type" />,
                 placeholder: "Card Title",
                 contentEditable: true,
             },
             description: {
-                type: "textarea",
+                type: "textarea" as const,
                 label: "Description",
                 labelIcon: <Icon icon="lucide:type" />,
                 placeholder: "Brief description of the card content.",
@@ -44,7 +44,7 @@ export const PuckCard: ComponentConfig = {
             bgColor: {
                 label: "Background Color",
                 labelIcon: <Icon icon="lucide:paint-bucket" />,
-                type: "select",
+                type: "select" as const,
                 options: [
                     { label: "White", value: "bg-white" },
                     { label: "Light", value: "bg-light" },
@@ -54,7 +54,7 @@ export const PuckCard: ComponentConfig = {
                 ],
             },
             type: {
-                type: "radio",
+                type: "radio" as const,
                 label: "Card Type",
                 labelIcon: <Icon icon="lucide:square-equal" />,
                 options: [
@@ -71,7 +71,7 @@ export const PuckCard: ComponentConfig = {
                 imgUrl: {
                     label: "Image URL",
                     labelIcon: <Icon icon="lucide:image" />,
-                    type: "text",
+                    type: "text" as const,
                     placeholder: "Paste image URL here",
                 },
             };
@@ -79,7 +79,7 @@ export const PuckCard: ComponentConfig = {
             return {
                 ...fields,
                 icon: {
-                    type: "select",
+                    type: "select" as const,
                     label: "Icon",
                     labelIcon: <Icon icon="lucide:circle" />,
                     options: [
