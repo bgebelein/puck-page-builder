@@ -1,38 +1,12 @@
 "use client";
 
 import type { Data } from "@measured/puck";
-import { Puck, createUsePuck, Button } from "@measured/puck";
+import { Puck } from "@measured/puck";
 import config from "../../../puck.config";
 import { Icon } from "@iconify/react";
 import { puckSlider } from "../../fields/slider";
 import { puckToggle } from "../../fields/toggle";
-
-const usePuck = createUsePuck();
-
-function HeaderActions({ children }: { children: React.ReactNode }) {
-  const dispatch = usePuck((s) => s.dispatch);
-  const previewMode = usePuck((s) => s.appState.ui.previewMode);
-
-  const togglePreview = () => {
-    dispatch({
-      type: "setUi",
-      ui: {
-        previewMode: previewMode === "interactive" ? "edit" : "interactive",
-        leftSideBarVisible: previewMode === "interactive" ? true : false,
-        rightSideBarVisible: previewMode === "interactive" ? true : false,
-      },
-    });
-  };
-
-  return (
-    <>
-      <Button onClick={togglePreview} variant="secondary">
-        <Icon icon={previewMode === "interactive" ? "lucide:pen" : "lucide:eye"} className="size-4"></Icon>{previewMode === "interactive" ? "Edit" : "Preview"}
-      </Button>
-      {children}
-    </>
-  );
-}
+import { headerActions } from "../custom/headerActions";
 
 export function Client({ path, data }: { path: string; data: Partial<Data> }) {
   return (
@@ -44,7 +18,7 @@ export function Client({ path, data }: { path: string; data: Partial<Data> }) {
           slider: puckSlider,
           toggle: puckToggle,
         },
-        headerActions: HeaderActions,
+        headerActions: headerActions,
       }}
       viewports={[
         {
