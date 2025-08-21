@@ -36,7 +36,7 @@ export const Collapsible: ComponentConfig = {
                 type: "Bodytext",
                 props: {
                     text: "This is the content of the collapsible section. You can add more details here.",
-                    size: "text-lg",
+                    size: "text-xl",
                     alignment: "text-left",
                 }
             }

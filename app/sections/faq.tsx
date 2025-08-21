@@ -63,7 +63,7 @@ export const Faq: ComponentConfig = {
                             type: "Bodytext",
                             props: {
                                 text: "This is the answer to question 1. It provides detailed information about the topic.",
-                                size: "text-lg",
+                                size: "text-xl",
                                 alignment: "text-left",
                             }
                         }
@@ -80,7 +80,7 @@ export const Faq: ComponentConfig = {
                             type: "Bodytext",
                             props: {
                                 text: "This is the answer to question 2. It provides detailed information about the topic.",
-                                size: "text-lg",
+                                size: "text-xl",
                                 alignment: "text-left",
                             }
                         }
@@ -97,7 +97,7 @@ export const Faq: ComponentConfig = {
                             type: "Bodytext",
                             props: {
                                 text: "This is the answer to question 3. It provides detailed information about the topic.",
-                                size: "text-lg",
+                                size: "text-xl",
                                 alignment: "text-left",
                             }
                         }
