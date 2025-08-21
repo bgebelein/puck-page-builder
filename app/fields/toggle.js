@@ -1,15 +1,13 @@
 import { FieldLabel } from "@measured/puck";
 
-export const puckSlider = ({ field, onChange, value }) => (
+export const puckToggle = ({ field, onChange, value }) => (
     <FieldLabel label={field.label} icon={field.icon}>
         <input
-            type="range"
-            min={field.min}
-            max={field.max}
-            step={field.step}
+            type="checkbox"
             defaultValue={value}
             name={field.label}
             onChange={(e) => onChange(e.currentTarget.value)}
+            checked={value}
         />
-    </FieldLabel >
+    </FieldLabel>
 )

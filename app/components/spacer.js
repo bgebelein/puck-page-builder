@@ -13,25 +13,12 @@ export const Spacer = {
     label: "Spacer",
     fields: {
         size: {
-            type: "custom",
+            type: "slider",
             label: "Size",
+            icon: <Icon icon="lucide:sliders-horizontal" />,
             min: 1,
             max: 5,
             step: 1,
-            render: ({ field, name, onChange, value }) => (
-                <FieldLabel label={field.label} icon={<Icon icon="lucide:sliders-horizontal" />}>
-                    <input
-                        type="range"
-                        min={field.min}
-                        max={field.max}
-                        step={field.step}
-                        defaultValue={value}
-                        name={name}
-                        onChange={(e) => onChange(e.currentTarget.value)}
-                        style={{ border: "1px solid black", padding: 4 }}
-                    />
-                </FieldLabel>
-            ),
         },
     },
     defaultProps: {

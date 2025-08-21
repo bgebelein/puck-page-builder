@@ -4,12 +4,29 @@ import type { Data } from "@measured/puck";
 import { Puck } from "@measured/puck";
 import config from "../../../puck.config";
 import { Icon } from "@iconify/react";
+import { puckSlider } from "../../fields/slider";
+import { puckToggle } from "../../fields/toggle";
+
+// const togglePreview = () => {
+//   dispatch({
+//     type: "setUi",
+//     ui: {
+//       previewMode: previewMode === "edit" ? "interactive" : "edit",
+//     },
+//   });
+// };
 
 export function Client({ path, data }: { path: string; data: Partial<Data> }) {
   return (
     <Puck
       config={config}
       data={data}
+      overrides={{
+        fieldTypes: {
+          slider: puckSlider,
+          toggle: puckToggle,
+        },
+      }}
       viewports={[
         {
           width: 480,
@@ -23,7 +40,7 @@ export function Client({ path, data }: { path: string; data: Partial<Data> }) {
           label: "MD",
           icon: <Icon icon="tabler:device-mobile-rotated" />,
         },
-        
+
         {
           width: 1024,
           height: "auto",
