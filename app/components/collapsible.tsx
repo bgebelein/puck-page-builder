@@ -42,14 +42,14 @@ export const Collapsible: ComponentConfig = {
             }
         ]
     },
-    render: ({ title, bgColor, content: Content }) => {
+    render: ({ title, bgColor, puck: {isEditing}, content: Content }) => {
         return (
-            <details className={`group p-8 rounded-2xl shadow-sm ${bgColor}`} open>
-                <summary className="flex items-center justify-between cursor-pointer mb-4">
+            <details className={`group p-6 rounded-2xl shadow-sm ${bgColor}`} open={isEditing ? true : false}>
+                <summary className="flex items-center justify-between cursor-pointer">
                     <span className="text-2xl font-semibold">{title}</span>
                     <Icon icon="lucide:chevron-down" className="transition-transform group-open:rotate-180" />
                 </summary>
-                <Content className="flex flex-col gap-4" />
+                <Content className="flex flex-col gap-4 mt-6" />
             </details>
         );
     }
