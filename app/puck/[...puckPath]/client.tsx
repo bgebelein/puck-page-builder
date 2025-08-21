@@ -7,15 +7,6 @@ import { Icon } from "@iconify/react";
 import { puckSlider } from "../../fields/slider";
 import { puckToggle } from "../../fields/toggle";
 
-// const togglePreview = () => {
-//   dispatch({
-//     type: "setUi",
-//     ui: {
-//       previewMode: previewMode === "edit" ? "interactive" : "edit",
-//     },
-//   });
-// };
-
 export function Client({ path, data }: { path: string; data: Partial<Data> }) {
   return (
     <Puck
