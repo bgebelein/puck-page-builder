@@ -1,11 +1,38 @@
 "use client";
 
 import type { Data } from "@measured/puck";
-import { Puck } from "@measured/puck";
+import { Puck, createUsePuck, Button } from "@measured/puck";
 import config from "../../../puck.config";
 import { Icon } from "@iconify/react";
 import { puckSlider } from "../../fields/slider";
 import { puckToggle } from "../../fields/toggle";
+
+const usePuck = createUsePuck();
+
+function HeaderActions({ children }: { children: React.ReactNode }) {
+  const dispatch = usePuck((s) => s.dispatch);
+  const previewMode = usePuck((s) => s.appState.ui.previewMode);
+
+  const togglePreview = () => {
+    dispatch({
+      type: "setUi",
+      ui: {
+        previewMode: previewMode === "interactive" ? "edit" : "interactive",
+        leftSideBarVisible: previewMode === "interactive" ? true : false,
+        rightSideBarVisible: previewMode === "interactive" ? true : false,
+      },
+    });
+  };
+
+  return (
+    <>
+      <Button onClick={togglePreview} variant="secondary">
+        <Icon icon={previewMode === "interactive" ? "lucide:pen" : "lucide:eye"} className="size-4"></Icon>{previewMode === "interactive" ? "Edit" : "Preview"}
+      </Button>
+      {children}
+    </>
+  );
+}
 
 export function Client({ path, data }: { path: string; data: Partial<Data> }) {
   return (
@@ -17,13 +44,14 @@ export function Client({ path, data }: { path: string; data: Partial<Data> }) {
           slider: puckSlider,
           toggle: puckToggle,
         },
+        headerActions: HeaderActions,
       }}
       viewports={[
         {
           width: 480,
-          height: "auto", // Optional height. Can be numeric or "auto". Defaults to "auto".
-          label: "SM", // Optional. Shown in tooltip.
-          icon: <Icon icon="tabler:device-mobile" />, // Optional. Use lucide-icons to align with Puck UI.
+          height: "auto",
+          label: "SM",
+          icon: <Icon icon="tabler:device-mobile" />,
         },
         {
           width: 768,
@@ -31,7 +59,6 @@ export function Client({ path, data }: { path: string; data: Partial<Data> }) {
           label: "MD",
           icon: <Icon icon="tabler:device-mobile-rotated" />,
         },
-
         {
           width: 1024,
           height: "auto",
