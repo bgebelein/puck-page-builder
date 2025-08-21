@@ -19,7 +19,7 @@ export const Spacer = {
             max: 5,
             step: 1,
             render: ({ field, name, onChange, value }) => (
-                <FieldLabel label={field.label}>
+                <FieldLabel label={field.label} icon={<Icon icon="lucide:sliders-horizontal" />}>
                     <input
                         type="range"
                         min={field.min}
