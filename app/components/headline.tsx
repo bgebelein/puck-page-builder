@@ -37,7 +37,7 @@ export const Headline: ComponentConfig = {
   },
   defaultProps: {
     title: "Headline",
-    hierarchy: "h1",
+    hierarchy: "h2",
     alignment: "text-left",
   },
   render: ({ title, hierarchy, alignment }) => {
