@@ -45,12 +45,12 @@ export function Client({ path, data }: { path: string; data: Partial<Data> }) {
           label: "XL",
           icon: <Icon icon="tabler:device-laptop" />,
         },
-        // {
-        //   width: "100%",
-        //   height: "auto",
-        //   label: "2XL",
-        //   icon: <Icon icon="tabler:device-desktop" />,
-        // },
+        {
+          width: "100%" as unknown as number,
+          height: "auto",
+          label: "2XL",
+          icon: <Icon icon="tabler:device-desktop" />,
+        },
       ]}
       onPublish={async (data) => {
         await fetch("/puck/api", {
