@@ -1,5 +1,6 @@
 import { ComponentConfig } from "@measured/puck";
 import { Icon } from "@iconify/react";
+import React from "react";
 
 export const Headline: ComponentConfig = {
   label: "Headline",
@@ -41,19 +42,6 @@ export const Headline: ComponentConfig = {
     alignment: "text-left",
   },
   render: ({ title, hierarchy, alignment }) => {
-    switch (hierarchy) {
-      case "h1":
-        return <h1 className={`${alignment}`}>{title}</h1>;
-      case "h2":
-        return <h2 className={`${alignment}`}>{title}</h2>;
-      case "h3":
-        return <h3 className={`${alignment}`}>{title}</h3>;
-      case "h4":
-        return <h4 className={`${alignment}`}>{title}</h4>;
-      case "h5":
-        return <h5 className={`${alignment}`}>{title}</h5>;
-      case "h6":
-        return <h6 className={`${alignment}`}>{title}</h6>;
-    }
+    return React.createElement(hierarchy, { className: alignment }, title);
   }
 }
