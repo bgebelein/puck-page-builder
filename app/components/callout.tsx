@@ -56,7 +56,7 @@ export const Callout: ComponentConfig = {
     },
     render: ({ variant, text }) => {
         return (
-            <div className={`flex flex-row items-start gap-5 ${calloutStyles.base} ${calloutStyles[variant]}`}>
+            <div className={`flex flex-row items-start gap-5 ${calloutStyles.base} ${calloutStyles[variant]}`} role="alert">
                 <div className={`text-white p-4 rounded-xl inline-block ${calloutIcons[variant].color}`}>
                     <Icon icon={calloutIcons[variant].icon} />
                 </div>
